@@ -4,12 +4,11 @@
 
 def Number():
     frut = open("text2.txt", encoding='utf-8')
-    quantity = frut.read()
+    quantity = frut.readlines()
     frut.close()
     col = []
     letter = input("Введите букву: ")
-    letter = letter.swapcase()
-    quantity = quantity.split(", ")
+    letter = letter.upper()
     for i in quantity:
         if i[0] == letter:
             col = i
